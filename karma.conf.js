@@ -74,23 +74,12 @@ module.exports = function(config) {
       ]
     },
 
-    coverageReporter: {
-      reporters: [{
-        type: 'json',
-        subdir: '.',
-        file: 'coverage-final.json'
-      }]
-    },
-
     remapIstanbulReporter: {
-      src: 'coverage/coverage-final.json',
       reports: {
         lcovonly: 'coverage/lcov.info',
         html: 'coverage/html',
         'text-summary': null
-      },
-      timeoutNotCreated: 5000,
-      timeoutNoMoreFiles: 1000
+      }
     },
 
     // test results reporter to use
